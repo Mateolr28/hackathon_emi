@@ -1,5 +1,6 @@
 """Aplicación local EMI EnRuta. Demo académica con datos ficticios."""
 import time
+from threading import Lock
 from uuid import uuid4
 
 import pandas as pd
@@ -12,6 +13,7 @@ from src.recomendacion import (AMBULANCIAS, NOMBRES_COMP, UMBRAL_R04, cop, evalu
 
 ROTULO = "Demo académica con datos ficticios"
 PENDIENTE = "__pendiente__"
+CADUCIDAD_H = 8  # C-03: un caso sin uso durante un turno de 8 h se libera de la memoria del servidor.
 
 st.set_page_config(page_title="EMI EnRuta · " + ROTULO, layout="wide", initial_sidebar_state="collapsed")
 st.title("EMI EnRuta")
@@ -23,6 +25,29 @@ st.warning(f"**{ROTULO}.** Los resultados representan el ejercicio y no la opera
 def casos_abiertos():
     # El enlace (?caso=…) permite recuperar el mismo cronómetro al recargar la pestaña.
     return {}
+
+
+@st.cache_resource
+def _cerrojo():
+    return Lock()
+
+
+def abrir_caso(identificador):
+    """Devuelve el caso del enlace y libera los que llevan más de CADUCIDAD_H horas sin uso (C-03).
+
+    Un caso confirmado cuyo guardado falló no se libera: conserva la decisión para reintentar.
+    """
+    ahora = time.monotonic()
+    with _cerrojo():
+        casos = casos_abiertos()
+        for clave, caso in list(casos.items()):
+            sin_guardar = caso["fila"] is not None and not caso["guardada"]
+            if ahora - caso.get("visto", ahora) > CADUCIDAD_H * 3600 and not sin_guardar:
+                del casos[clave]
+        activo = casos.get(identificador)
+        if activo is not None:
+            activo["visto"] = ahora
+        return activo
 
 
 @st.cache_data
@@ -45,7 +70,8 @@ def estado_en_instante(m):
 
 
 def nuevo():
-    casos_abiertos().pop(st.query_params.get("caso", ""), None)
+    with _cerrojo():
+        casos_abiertos().pop(st.query_params.get("caso", ""), None)
     st.query_params.clear()
     st.session_state.pop("activo", None)
     st.rerun()
@@ -81,8 +107,10 @@ def configuracion():
     if st.button("Iniciar caso", type="primary"):
         caso = preparar(tablas, solicitud, previo)
         identificador = str(uuid4())
-        casos_abiertos()[identificador] = dict(id=identificador, caso=caso, inicio=None, modalidad=modo,
-                                               vista=evaluar(caso), fila=None, guardada=False)
+        with _cerrojo():
+            casos_abiertos()[identificador] = dict(id=identificador, caso=caso, inicio=None, modalidad=modo,
+                                                   vista=evaluar(caso), fila=None, guardada=False,
+                                                   visto=time.monotonic())
         st.session_state.activo = casos_abiertos()[identificador]
         st.query_params["caso"] = identificador
         st.rerun()
@@ -200,7 +228,14 @@ def despachar(activo):
                + (" · depende de liberación" if p["espera"] > 0 else "") for p in opciones}
     nombres.update({p["plan_id"]: f"{p['plan_id']} · {p['tipo']} · excepción (no recomendada)" for p in excepciones})
     nombres[PENDIENTE] = "Dejar pendiente" if opciones else "Registrar sin asignar"
-    seleccion = st.selectbox("Alternativa a despachar", ids + exc + [PENDIENTE], key="plan_" + activo["id"],
+    clave = "plan_" + activo["id"]
+    previa = st.session_state.get(clave)
+    if previa is not None and previa not in ids + exc + [PENDIENTE]:
+        # C-05: sin esto, Streamlit cambiaría en silencio la elección por otra alternativa.
+        st.session_state[clave] = None
+        st.warning(f"La alternativa elegida ({previa}) ya no está disponible con las estimaciones actualizadas. "
+                   "Elige de nuevo.")
+    seleccion = st.selectbox("Alternativa a despachar", ids + exc + [PENDIENTE], key=clave,
                              index=0 if asistida and ids else None, format_func=nombres.get,
                              placeholder="Elige una alternativa o deja el caso pendiente")
     elegida = next((p for p in opciones + excepciones if p["plan_id"] == seleccion), None)
@@ -301,8 +336,14 @@ def revisar(activo, intentar=False):
 
 def principal():
     identificador = st.query_params.get("caso")
-    activo = casos_abiertos().get(identificador)
+    activo = abrir_caso(identificador)
     if activo is None:
+        if identificador:
+            # C-03: enlace caducado o servidor reiniciado. Se avisa y se vuelve al inicio sin error.
+            st.query_params.clear()
+            st.session_state.pop("activo", None)
+            st.warning("Caso no encontrado: el enlace caducó o el servidor se reinició. Inicia uno nuevo. "
+                       "Las decisiones ya guardadas siguen en decisiones.csv.")
         configuracion()
         return
     st.session_state.activo = activo

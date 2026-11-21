@@ -15,7 +15,10 @@ Revisión del 21/11/2026 sobre la versión de `mvp\salviada\EMI_EnRuta`: código
 | I-01 | Hecho | Las alternativas 2 y 3 dicen el motivo concreto («llegada similar a MOV-005 (diferencia 0,4 min), pero cuesta … más de ida») y una comparación con la opción 1 («llega 9,1 min después y cuesta … menos»). |
 | T-01 | Hecho (falta solo la revisión visual y guardar el .pbix) | El modelo se actualizó en Desktop 2.159 y las consultas dieron 30 decisiones; con una decisión R04 de sesión, 31 decisiones y 32 participaciones, sin doble conteo de costos; línea base 52,9 / 55,1. Se encontró y corrigió un error en los nombres de tres medidas. Detalle en `tablero/README.md`; nueva prueba de consistencia entre visuales y modelo. |
 
-Pruebas: 28 de 28 en verde (antes 23).
+| C-03 | Hecho | Los casos sin uso durante 8 h (`CADUCIDAD_H` en `app.py`) se liberan de la memoria del servidor. Si la decisión ya se confirmó pero falló el guardado, el caso se conserva para reintentar. Un enlace caducado, o de un servidor reiniciado, muestra «Caso no encontrado… Inicia uno nuevo» y vuelve al inicio sin error. Prueba `test_c03_enlace_caducado_o_desconocido`. |
+| C-05 | Hecho | Se reprodujo: no fallaba, pero Streamlit **cambiaba en silencio** la alternativa elegida por la nueva opción 1. Ahora la selección se vacía, se muestra un aviso y el botón de confirmar queda deshabilitado hasta que el despachador elija de nuevo. Prueba `test_c05_alternativa_que_desaparece_al_actualizar`. |
+
+Pruebas: 30 de 30 en verde (antes 28).
 
 ## Resumen
 

@@ -486,6 +486,73 @@ class Interfaz(unittest.TestCase):
                 fila = leer(ruta)[0]
                 self.assertEqual((fila["estado_decision"], fila["motivo_decision"]), ("pendiente", "espera_liberacion"))
 
+    def recargar(self, identificador):
+        app = AppTest.from_file(str(RAIZ / "app.py"), default_timeout=60)
+        app.query_params["caso"] = [identificador]
+        return app.run()
+
+    def test_c03_enlace_caducado_o_desconocido(self):
+        with carpeta_de_prueba() as carpeta:
+            ruta = carpeta / "decisiones.csv"
+            with patch("src.decisiones.REGISTRO", ruta):
+                # Enlace de un servidor reiniciado: aviso y vuelta al inicio, sin error.
+                app = self.recargar("no-existe")
+                self.assertFalse(app.exception)
+                self.assertTrue(any("Caso no encontrado" in w.value for w in app.warning))
+                self.assertTrue(any(b.label == "Iniciar caso" for b in app.button))
+                self.assertNotIn("caso", app.query_params)
+
+                # Caso abierto sin uso durante más de 8 h: se libera y el enlace avisa.
+                app = self.app()
+                self.boton(app, "Iniciar caso").click().run()
+                abierto = app.session_state["activo"]
+                abierto["visto"] -= 9 * 3600
+                app = self.recargar(abierto["id"])
+                self.assertFalse(app.exception)
+                self.assertTrue(any("Caso no encontrado" in w.value for w in app.warning))
+
+                # Un caso confirmado con guardado fallido no se libera: conserva la decisión.
+                app = self.app()
+                self.boton(app, "Iniciar caso").click().run()
+                with patch("src.decisiones.guardar", side_effect=PermissionError("archivo ocupado")):
+                    self.boton(app, "Confirmar decisión").click().run()
+                fallido = app.session_state["activo"]
+                fallido["visto"] -= 9 * 3600
+                app = self.recargar(fallido["id"])
+                self.assertFalse(any("Caso no encontrado" in w.value for w in app.warning))
+                self.boton(app, "Reintentar guardado").click().run()
+                self.assertTrue(app.success)
+                self.assertEqual(len(filas_csv(ruta)), 1)
+
+    def test_c05_alternativa_que_desaparece_al_actualizar(self):
+        import src.recomendacion as motor
+        real = motor.evaluar
+
+        def sin_pareja(caso, segundos=0.):
+            vista = real(caso, segundos)
+            vista["opciones"] = [p for p in vista["opciones"] if p["plan_id"] != "MOV-016+MOV-013"]
+            return vista
+
+        with carpeta_de_prueba() as carpeta:
+            ruta = carpeta / "decisiones.csv"
+            with patch("src.decisiones.REGISTRO", ruta):
+                app = self.app()
+                app.selectbox[0].select("ESC-04").run()
+                self.boton(app, "Iniciar caso").click().run()
+                alternativa = lambda: next(s for s in app.selectbox if s.label == "Alternativa a despachar")
+                alternativa().select("MOV-016+MOV-013").run()
+                with patch("src.recomendacion.evaluar", sin_pareja):
+                    self.boton(app, "Actualizar estimaciones").click().run()
+                    self.assertFalse(app.exception)
+                    self.assertTrue(any("ya no está disponible" in w.value for w in app.warning))
+                    self.assertIsNone(alternativa().value)                       # Sin cambio silencioso
+                    self.assertTrue(self.boton(app, "Confirmar decisión").disabled)
+                    alternativa().select("MOV-015+MOV-013").run()
+                    self.assertFalse(any("ya no está disponible" in w.value for w in app.warning))
+                    self.boton(app, "Confirmar decisión").click().run()
+                self.assertFalse(app.exception)
+                self.assertEqual(leer(ruta)[0]["plan_elegido_id"], "MOV-015+MOV-013")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -22,7 +22,7 @@ Recorrido de la demo:
 3. **Confirmar.** Puedes aceptar la alternativa, elegir otra válida, usar una excepción *no recomendada* (con motivo escrito obligatorio) o dejar el caso pendiente con su motivo.
 4. **Revisar.** Después de guardar aparecen el ID, la decisión leída del CSV y, por primera vez, la referencia del escenario con el comentario del coordinador. Antes de confirmar nunca se muestran.
 
-Si recargas el enlace `?caso=…` mientras el servidor sigue abierto, recuperas el mismo caso y el mismo cronómetro.
+Si recargas el enlace `?caso=…` mientras el servidor sigue abierto, recuperas el mismo caso y el mismo cronómetro. Un caso sin uso durante 8 h se libera. Si el enlace caducó o el servidor se reinició, la app avisa y vuelve al inicio. Un caso confirmado cuyo guardado falló no se libera. Si al actualizar las estimaciones desaparece la alternativa elegida, la selección se vacía y la app pide elegir de nuevo.
 
 ## Preparación de datos
 
@@ -89,7 +89,7 @@ La escritura usa un bloqueo de archivo y un reemplazo atómico. Si falla, la dec
 .\.venv\Scripts\python.exe -m unittest -v test_flujo
 ```
 
-Son 28 pruebas que cubren los criterios del recorrido. Las de interfaz pulsan los botones de Streamlit y escriben en una copia temporal.
+Son 30 pruebas que cubren los criterios del recorrido. Las de interfaz pulsan los botones de Streamlit y escriben en una copia temporal.
 
 - **ESC-01-S01:** VMD para el 03, MOV-011 a 12,5 min.
 - **ESC-02-S01:** MOV-025 a 24,5 min desde su zona actual con factor 1,6.
