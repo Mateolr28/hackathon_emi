@@ -1,0 +1,17 @@
+# Entorno y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+
+# Carpetas temporales de las pruebas
+.prueba-*/
+
+# Registro local: bloqueos y respaldos de restauración (la precarga está en datos/demo/)
+datos/*.lock
+datos/demo/*.lock
+datos/decisiones_antes_*.csv
+
+# Cachés locales de Power BI Desktop (contienen datos y configuración del equipo)
+tablero/**/.pbi/
+*.abf
+tablero/*.pbix.bak

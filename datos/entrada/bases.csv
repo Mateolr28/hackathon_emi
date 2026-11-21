@@ -1,0 +1,9 @@
+﻿id_base,nombre_base,municipio,id_zona,lat,lon
+BAS-01,Base Centro,Medellín,Z-MED-10-02,6.257,-75.573
+BAS-02,Base Poblado,Medellín,Z-MED-14-01,6.205,-75.567
+BAS-03,Base Laureles,Medellín,Z-MED-11-02,6.255,-75.596
+BAS-04,Base Norte,Medellín,Z-MED-04-01,6.28,-75.56
+BAS-05,Base Bello,Bello,Z-BEL-01,6.337,-75.558
+BAS-06,Base Envigado,Envigado,Z-ENV-01,6.17,-75.585
+BAS-07,Base Itagüí,Itagüí,Z-ITA-01,6.172,-75.611
+BAS-08,Base Robledo,Medellín,Z-MED-07-01,6.275,-75.595

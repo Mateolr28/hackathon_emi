@@ -1,0 +1,16 @@
+﻿codigo_emi,tipo_movil,compatibilidad
+01,TAM,preferida
+01,TAB,permitida
+01,VMD,solo_estabilizacion
+02,TAM,permitida
+02,TAB,preferida
+02,VMD,solo_estabilizacion
+07,TAM,no_recomendada
+07,TAB,posible_traslado
+07,VMD,preferida
+03,TAM,no_permitida
+03,TAB,no_recomendada
+03,VMD,preferida
+06,TAM,no_permitida
+06,TAB,no_permitida
+06,VMD,preferida

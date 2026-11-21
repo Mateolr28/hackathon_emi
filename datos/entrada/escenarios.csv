@@ -1,0 +1,4 @@
+﻿id_escenario,nombre,descripcion,fecha_hora_inicio,tipo_dia,duracion_min,factor_trafico_inicio,objetivo_aprendizaje,n_solicitudes
+ESC-01,Operación normal,Martes en la mañana con demanda media. La mayoría de la flota está disponible en sus bases.,2026-03-17 10:00,LUNES_A_VIERNES,60,1.25,Línea base: comprobar que la herramienta reproduce decisiones razonables cuando no hay presión de recursos.,6
+ESC-02,Hora pico de la tarde,"Jueves 6:00 p. m.: tráfico alto (factor 1,65) y varias móviles ocupadas. Llegan 10 solicitudes en una hora.",2026-03-19 18:00,LUNES_A_VIERNES,60,1.6,Evaluar el impacto del tráfico y de la ubicación real de las móviles (no la base) en el tiempo de llegada.,10
+ESC-04,Sin ambulancia disponible,Sábado 9:00 p. m.: todas las ambulancias (TAM y TAB) están ocupadas. Entra un 01 en Manrique.,2026-03-28 21:00,SABADO,60,1.1,Aplicar la regla de estabilización: enviar VMD como primer respondiente y luego la primera ambulancia que se libere.,2

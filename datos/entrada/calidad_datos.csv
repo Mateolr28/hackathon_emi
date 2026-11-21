@@ -1,0 +1,22 @@
+﻿chequeo,resultado,detalle
+id_servicio duplicado,0,Debe ser 0.
+zona de servicio desconocida,0,Debe ser 0.
+móvil desconocida en participaciones,0,Debe ser 0.
+zona de origen desconocida en participaciones,0,Debe ser 0.
+base desconocida en flota,0,Debe ser 0.
+tarifa no positiva en flota,0,Debe ser 0.
+servicios totales,10402,Periodo 2026-03-16 a 2026-04-30.
+servicios con 0 participaciones,564,"Una solicitud puede tener 0, 1 o 2 móviles."
+servicios con 1 participaciones,9479,"Una solicitud puede tener 0, 1 o 2 móviles."
+servicios con 2 participaciones,359,"Una solicitud puede tener 0, 1 o 2 móviles."
+estado_cierre ATENDIDO_EN_SITIO,7962,Cancelados y resueltos por teléfono no tienen llegada.
+estado_cierre CANCELADO_POR_USUARIO,186,Cancelados y resueltos por teléfono no tienen llegada.
+estado_cierre NO_UBICADO,51,Cancelados y resueltos por teléfono no tienen llegada.
+estado_cierre RESUELTO_TELEFONICAMENTE,562,Cancelados y resueltos por teléfono no tienen llegada.
+estado_cierre TRASLADADO,1641,Cancelados y resueltos por teléfono no tienen llegada.
+servicios sin canal,111,Advertencia del Readme (≈1 %).
+participaciones sin fin de atención,294,Incluye cancelaciones en ruta.
+servicios con reclasificación,422,Base de KPI-12. La demo usa la clasificación vigente en el instante del caso (R07).
+servicios sin tiempo_respuesta_min,748,Quedan fuera del denominador de KPI-01 a KPI-03.
+KPI-08 costo completo medio por servicio con móvil (COP),127282,km × costo_km + horas asignación→liberación × costo_hora; denominador 9838 servicios con móvil. Archivo 07: 127300.
+llegadas anómalas (> 45 min sobre la matriz),183,Excluidas solo en la vista 'corregida' de linea_base_kpi.csv. La vista 'original' las conserva.

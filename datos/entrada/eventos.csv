@@ -1,0 +1,3 @@
+﻿id_escenario,minuto,tipo_evento,id_solicitud,id_movil,detalle,nueva_clasificacion,escala_manchester_nueva
+ESC-02,10,MOVIL_LIBERADA,,MOV-003,Termina atención previa en La Candelaria,,
+ESC-04,22,MOVIL_LIBERADA,,MOV-013,TAM liberada en Castilla (Hospital Ficticio del Norte),,

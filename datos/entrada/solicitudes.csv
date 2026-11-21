@@ -1,0 +1,19 @@
+﻿id_escenario,id_solicitud,minuto_llegada,id_zona,comuna,municipio,clasificacion_inicial,descripcion,escala_manchester,motivo_consulta,discriminador,posible_traslado
+ESC-01,ESC-01-S01,2,Z-MED-11-03,11 - Laureles-Estadio,Medellín,03,CONSULTA,VERDE,Adulto con mal estado general,Fiebre,0
+ESC-01,ESC-01-S02,8,Z-MED-16-02,16 - Belén,Medellín,07,PRIORIZADO,AMARILLO,Dolor abdominal en adulto,Dolor moderado,0
+ESC-01,ESC-01-S03,15,Z-MED-03-01,03 - Manrique,Medellín,02,URGENCIA - 20 MIN,NARANJA,Convulsiones,Convulsión activa o reciente,0
+ESC-01,ESC-01-S04,27,Z-ENV-02,Envigado,Envigado,03,CONSULTA,VERDE,Dolor de espalda,Dolor leve a moderado reciente,0
+ESC-01,ESC-01-S05,40,Z-MED-05-02,05 - Castilla,Medellín,06,CONSULTA BANAL,AZUL,Problemas oculares,Ojo rojo sin dolor ni pérdida visual,0
+ESC-01,ESC-01-S06,52,Z-ITA-02,Itagüí,Itagüí,07,PRIORIZADO,AMARILLO,Caídas,Deformidad o dolor moderado en extremidad,1
+ESC-02,ESC-02-S01,0,Z-MED-06-02,06 - Doce de Octubre,Medellín,02,URGENCIA - 20 MIN,NARANJA,Asma / disnea,Saturación baja,0
+ESC-02,ESC-02-S02,4,Z-MED-16-01,16 - Belén,Medellín,07,PRIORIZADO,AMARILLO,Disnea en adulto,Fiebre con dificultad respiratoria leve,0
+ESC-02,ESC-02-S03,9,Z-MED-14-02,14 - El Poblado,Medellín,03,CONSULTA,VERDE,Adulto con mal estado general,Fiebre,0
+ESC-02,ESC-02-S04,12,Z-MED-01-02,01 - Popular,Medellín,01,EMERGENCIA - 15 MIN,ROJO,Dolor torácico,Shock,0
+ESC-02,ESC-02-S05,18,Z-SAB-02,Sabaneta,Sabaneta,07,PRIORIZADO,AMARILLO,Hipertensión,Cifras elevadas con síntomas leves,0
+ESC-02,ESC-02-S06,25,Z-MED-12-01,12 - La América,Medellín,03,CONSULTA,VERDE,Síntomas respiratorios,Tos y congestión sin dificultad respiratoria,0
+ESC-02,ESC-02-S07,31,Z-BEL-02,Bello,Bello,02,URGENCIA - 20 MIN,NARANJA,Diabetes,Hipoglicemia,0
+ESC-02,ESC-02-S08,38,Z-MED-10-01,10 - La Candelaria,Medellín,03,CONSULTA,VERDE,Cefalea,Dolor leve a moderado,0
+ESC-02,ESC-02-S09,46,Z-MED-13-02,13 - San Javier,Medellín,07,PRIORIZADO,AMARILLO,Heridas,Sangrado no controlable con presión leve,0
+ESC-02,ESC-02-S10,55,Z-ENV-03,Envigado,Envigado,06,CONSULTA BANAL,AZUL,Síntomas respiratorios,Síntomas leves de resfriado,0
+ESC-04,ESC-04-S01,0,Z-MED-03-02,03 - Manrique,Medellín,01,EMERGENCIA - 15 MIN,ROJO,Dolor torácico,Shock,0
+ESC-04,ESC-04-S02,12,Z-MED-10-03,10 - La Candelaria,Medellín,03,CONSULTA,VERDE,Diarrea y vómitos,Vómito o diarrea sin deshidratación,0

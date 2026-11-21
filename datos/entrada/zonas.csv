@@ -1,0 +1,63 @@
+﻿id_zona,municipio,comuna,lat_centroide,lon_centroide,demanda_relativa
+Z-MED-01-01,Medellín,01 - Popular,6.293,-75.54600000000001,ALTA
+Z-MED-01-02,Medellín,01 - Popular,6.3,-75.55200000000001,ALTA
+Z-MED-01-03,Medellín,01 - Popular,6.286,-75.54000000000001,ALTA
+Z-MED-02-01,Medellín,02 - Santa Cruz,6.296,-75.556,ALTA
+Z-MED-02-02,Medellín,02 - Santa Cruz,6.303,-75.562,ALTA
+Z-MED-02-03,Medellín,02 - Santa Cruz,6.289,-75.55,ALTA
+Z-MED-03-01,Medellín,03 - Manrique,6.275,-75.545,ALTA
+Z-MED-03-02,Medellín,03 - Manrique,6.282,-75.551,ALTA
+Z-MED-03-03,Medellín,03 - Manrique,6.268,-75.539,ALTA
+Z-MED-04-01,Medellín,04 - Aranjuez,6.28,-75.56,ALTA
+Z-MED-04-02,Medellín,04 - Aranjuez,6.287,-75.566,ALTA
+Z-MED-04-03,Medellín,04 - Aranjuez,6.273,-75.554,ALTA
+Z-MED-05-01,Medellín,05 - Castilla,6.29,-75.575,MEDIA
+Z-MED-05-02,Medellín,05 - Castilla,6.297,-75.581,MEDIA
+Z-MED-05-03,Medellín,05 - Castilla,6.283,-75.569,MEDIA
+Z-MED-06-01,Medellín,06 - Doce de Octubre,6.3,-75.58499999999999,ALTA
+Z-MED-06-02,Medellín,06 - Doce de Octubre,6.307,-75.59099999999999,ALTA
+Z-MED-06-03,Medellín,06 - Doce de Octubre,6.293,-75.57899999999999,ALTA
+Z-MED-07-01,Medellín,07 - Robledo,6.275,-75.595,MEDIA
+Z-MED-07-02,Medellín,07 - Robledo,6.282,-75.601,MEDIA
+Z-MED-07-03,Medellín,07 - Robledo,6.268,-75.589,MEDIA
+Z-MED-08-01,Medellín,08 - Villa Hermosa,6.255,-75.548,MEDIA
+Z-MED-08-02,Medellín,08 - Villa Hermosa,6.262,-75.554,MEDIA
+Z-MED-08-03,Medellín,08 - Villa Hermosa,6.248,-75.542,MEDIA
+Z-MED-09-01,Medellín,09 - Buenos Aires,6.238,-75.553,MEDIA
+Z-MED-09-02,Medellín,09 - Buenos Aires,6.245,-75.559,MEDIA
+Z-MED-09-03,Medellín,09 - Buenos Aires,6.231,-75.547,MEDIA
+Z-MED-10-01,Medellín,10 - La Candelaria,6.25,-75.56699999999999,ALTA
+Z-MED-10-02,Medellín,10 - La Candelaria,6.257,-75.57299999999999,ALTA
+Z-MED-10-03,Medellín,10 - La Candelaria,6.243,-75.56100000000001,ALTA
+Z-MED-11-01,Medellín,11 - Laureles-Estadio,6.248,-75.59,MEDIA
+Z-MED-11-02,Medellín,11 - Laureles-Estadio,6.255,-75.596,MEDIA
+Z-MED-11-03,Medellín,11 - Laureles-Estadio,6.241,-75.584,MEDIA
+Z-MED-12-01,Medellín,12 - La América,6.255,-75.605,MEDIA
+Z-MED-12-02,Medellín,12 - La América,6.262,-75.611,MEDIA
+Z-MED-12-03,Medellín,12 - La América,6.248,-75.599,MEDIA
+Z-MED-13-01,Medellín,13 - San Javier,6.258,-75.61799999999999,MEDIA
+Z-MED-13-02,Medellín,13 - San Javier,6.265,-75.624,MEDIA
+Z-MED-13-03,Medellín,13 - San Javier,6.251,-75.61199999999999,MEDIA
+Z-MED-14-01,Medellín,14 - El Poblado,6.205,-75.56699999999999,ALTA
+Z-MED-14-02,Medellín,14 - El Poblado,6.212,-75.57299999999999,ALTA
+Z-MED-14-03,Medellín,14 - El Poblado,6.198,-75.56100000000001,ALTA
+Z-MED-15-01,Medellín,15 - Guayabal,6.215,-75.59,BAJA
+Z-MED-15-02,Medellín,15 - Guayabal,6.222,-75.596,BAJA
+Z-MED-15-03,Medellín,15 - Guayabal,6.208,-75.584,BAJA
+Z-MED-16-01,Medellín,16 - Belén,6.225,-75.59999999999999,ALTA
+Z-MED-16-02,Medellín,16 - Belén,6.232,-75.60599999999999,ALTA
+Z-MED-16-03,Medellín,16 - Belén,6.218,-75.59399999999999,ALTA
+Z-BEL-01,Bello,Bello,6.337,-75.55800000000001,ALTA
+Z-BEL-02,Bello,Bello,6.3468,-75.5664,ALTA
+Z-BEL-03,Bello,Bello,6.3272,-75.5496,ALTA
+Z-ENV-01,Envigado,Envigado,6.17,-75.58499999999999,ALTA
+Z-ENV-02,Envigado,Envigado,6.1798,-75.5934,ALTA
+Z-ENV-03,Envigado,Envigado,6.1602,-75.5766,ALTA
+Z-ITA-01,Itagüí,Itagüí,6.172,-75.611,MEDIA
+Z-ITA-02,Itagüí,Itagüí,6.1818,-75.6194,MEDIA
+Z-SAB-01,Sabaneta,Sabaneta,6.151,-75.616,MEDIA
+Z-SAB-02,Sabaneta,Sabaneta,6.1608,-75.62439999999999,MEDIA
+Z-EST-01,La Estrella,La Estrella,6.158,-75.643,BAJA
+Z-CAL-01,Caldas,Caldas,6.091,-75.636,BAJA
+Z-COP-01,Copacabana,Copacabana,6.348,-75.509,BAJA
+Z-GIR-01,Girardota,Girardota,6.378,-75.44499999999999,BAJA

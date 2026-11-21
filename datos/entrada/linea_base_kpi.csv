@@ -1,0 +1,11 @@
+﻿vista,codigo_emi,objetivo_min,servicios,denominador,excluidos_anomalia,p90_min,mediana_min,promedio_min,pct_cumple,costo_completo_medio_cop,kpi04_espera_asignacion_mediana_min,archivo_p90_min,archivo_pct_cumple,definicion
+original,01,15.0,635,627,0,52.9,19.9,27.3,25.7,316272,0.0,52.9,25.7,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min
+original,02,20.0,1501,1476,0,55.1,20.2,28.7,49.2,247972,0.0,55.1,49.2,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min
+original,07,45.0,2806,2754,0,60.3,30.4,37.3,79.8,122611,6.2,60.3,79.8,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min
+original,03,90.0,3538,3468,0,79.5,53.5,56.8,93.8,72324,26.2,79.5,93.8,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min
+original,06,180.0,1922,1329,0,93.5,68.2,70.1,98.5,58402,40.6,93.5,98.5,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min
+corregida,01,15.0,628,620,7,50.7,19.6,26.2,26.0,316273,0.0,52.9,25.7,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min; excluye llegadas anómalas
+corregida,02,20.0,1471,1446,30,52.3,20.0,26.1,50.2,248481,0.0,55.1,49.2,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min; excluye llegadas anómalas
+corregida,07,45.0,2754,2702,52,56.4,30.0,35.0,81.3,122547,6.2,60.3,79.8,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min; excluye llegadas anómalas
+corregida,03,90.0,3476,3406,62,76.6,53.1,54.7,95.5,72261,26.2,79.5,93.8,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min; excluye llegadas anómalas
+corregida,06,180.0,1890,1297,32,91.2,67.6,67.1,100.0,58426,40.6,93.5,98.5,Solicitud → llegada de la primera móvil; clasificación final; denominador = servicios con tiempo_respuesta_min; excluye llegadas anómalas

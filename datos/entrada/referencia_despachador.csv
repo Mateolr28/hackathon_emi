@@ -1,0 +1,20 @@
+﻿id_escenario,id_solicitud,orden_movil,minuto_asignacion,id_movil,tipo_movil,rol,zona_origen_movil,tiempo_estimado_llegada_min,justificacion_despachador,comentario_coordinador
+ESC-01,ESC-01-S01,1,2,MOV-011,VMD,ATENCION,Z-MED-11-02,12.5,VMD más cercana (base Laureles).,Correcta.
+ESC-01,ESC-01-S02,1,9,MOV-005,VMD,ATENCION,Z-MED-10-02,23.2,VMD libre de la base Centro.,Había otra opción similar en Laureles (MOV-011 ya ocupada); correcta.
+ESC-01,ESC-01-S03,1,15,MOV-014,TAB,ATENCION_Y_TRASLADO,Z-MED-04-01,10.6,"TAB de base Norte, a pocos minutos de Manrique.",Correcta.
+ESC-01,ESC-01-S04,1,28,MOV-021,VMD,ATENCION,Z-ENV-01,10,VMD de base Envigado.,Correcta.
+ESC-01,ESC-01-S05,1,55,MOV-015,VMD,ATENCION,Z-MED-04-01,15.8,Consulta banal en cola; se asignó al terminar los pendientes.,Correcta: se priorizó lo urgente.
+ESC-01,ESC-01-S06,1,52,MOV-023,TAB,ATENCION,Z-ITA-01,9.5,07 con caída: se envió TAB de Itagüí por posible traslado.,Discutible: no había VMD en Itagüí (MOV-024 en mantenimiento). Alternativa: VMD de Envigado y dejar la TAB libre.
+ESC-02,ESC-02-S01,1,1,MOV-025,TAB,ATENCION_Y_TRASLADO,Z-MED-07-01,24.5,"TAB de base Robledo, la más cercana a Doce de Octubre.",Correcta.
+ESC-02,ESC-02-S02,1,5,MOV-011,VMD,ATENCION,Z-MED-11-02,21.1,VMD de Laureles.,Correcta.
+ESC-02,ESC-02-S03,1,10,MOV-009,VMD,ATENCION,Z-MED-14-01,10.1,VMD de base Poblado.,Correcta.
+ESC-02,ESC-02-S04,1,12,MOV-013,TAM,ATENCION_Y_TRASLADO,Z-MED-04-01,17.8,TAM de base Norte para emergencia en Popular.,Correcta.
+ESC-02,ESC-02-S05,1,19,MOV-021,VMD,ATENCION,Z-ENV-01,28,VMD de Envigado (la de Sabaneta está ocupada).,Correcta.
+ESC-02,ESC-02-S06,1,26,MOV-003,VMD,ATENCION,Z-MED-10-03,29.1,VMD liberada en La Candelaria.,Discutible: MOV-026 (base Robledo) estaba más cerca de La América.
+ESC-02,ESC-02-S07,1,31,MOV-017,TAB,ATENCION_Y_TRASLADO,Z-BEL-01,12,TAB de Bello.,Correcta.
+ESC-02,ESC-02-S08,1,39,MOV-005,VMD,ATENCION,Z-MED-10-02,10.4,VMD de base Centro.,Correcta.
+ESC-02,ESC-02-S09,1,47,MOV-026,VMD,ATENCION,Z-MED-07-01,21.6,VMD de Robledo.,Correcta.
+ESC-02,ESC-02-S10,1,58,MOV-016,VMD,ATENCION,Z-MED-04-01,70.90000000000001,Consulta banal en cola; se asignó VMD de Norte.,"Discutible: MOV-022 ya estaba libre en Sabaneta, mucho más cerca de Envigado en hora pico."
+ESC-04,ESC-04-S01,1,1,MOV-016,VMD,PRIMER_RESPONDIENTE_ESTABILIZACION,Z-MED-04-01,6.8,Sin ambulancias libres: VMD de base Norte a estabilizar.,Correcta.
+ESC-04,ESC-04-S01,2,22,MOV-013,TAM,ATENCION_Y_TRASLADO,Z-MED-05-01,12.5,Primera ambulancia liberada; TAM adecuada para rojo.,Correcta. Pudo preasignarse desde el minuto 1 para ganar tiempo.
+ESC-04,ESC-04-S02,1,13,MOV-003,VMD,ATENCION,Z-MED-10-02,11,VMD de base Centro.,Correcta.
