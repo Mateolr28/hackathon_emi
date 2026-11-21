@@ -1,0 +1,850 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "es-CO",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-CO",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "expressions": [
+      {
+        "name": "RutaCSV",
+        "kind": "m",
+        "expression": "\"C:\\Users\\Usuario\\Documents\\EstudIA\\mvp\\salviada\\EMI_EnRuta\\datos\\decisiones.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "RutaLineaBase",
+        "kind": "m",
+        "expression": "\"C:\\Users\\Usuario\\Documents\\EstudIA\\mvp\\salviada\\EMI_EnRuta\\datos\\entrada\\linea_base_kpi.csv\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "decisiones",
+        "columns": [
+          {
+            "name": "solicitud_id",
+            "dataType": "string",
+            "sourceColumn": "solicitud_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "escenario_id",
+            "dataType": "string",
+            "sourceColumn": "escenario_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "solicitud_fuente",
+            "dataType": "string",
+            "sourceColumn": "solicitud_fuente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "modalidad",
+            "dataType": "string",
+            "sourceColumn": "modalidad",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "origen_registro",
+            "dataType": "string",
+            "sourceColumn": "origen_registro",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fecha_hora_decision",
+            "dataType": "string",
+            "sourceColumn": "fecha_hora_decision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fecha_solicitud_escenario",
+            "dataType": "dateTime",
+            "sourceColumn": "fecha_solicitud_escenario",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tipo_servicio",
+            "dataType": "string",
+            "sourceColumn": "tipo_servicio",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "codigo_emi",
+            "dataType": "string",
+            "sourceColumn": "codigo_emi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zona_destino_id",
+            "dataType": "string",
+            "sourceColumn": "zona_destino_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "franja",
+            "dataType": "string",
+            "sourceColumn": "franja",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tipo_dia",
+            "dataType": "string",
+            "sourceColumn": "tipo_dia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "objetivo_min",
+            "dataType": "double",
+            "sourceColumn": "objetivo_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "previo_despacho_min",
+            "dataType": "double",
+            "sourceColumn": "previo_despacho_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "cantidad_elegibles",
+            "dataType": "int64",
+            "sourceColumn": "cantidad_elegibles",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "movil_recomendado_id",
+            "dataType": "string",
+            "sourceColumn": "movil_recomendado_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "min_viaje_recomendado",
+            "dataType": "double",
+            "sourceColumn": "min_viaje_recomendado",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_viaje_recomendado_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_viaje_recomendado_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ambulancia_recomendada_id",
+            "dataType": "string",
+            "sourceColumn": "ambulancia_recomendada_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "estado_decision",
+            "dataType": "string",
+            "sourceColumn": "estado_decision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "movil_elegido_id",
+            "dataType": "string",
+            "sourceColumn": "movil_elegido_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tipo_movil_elegido",
+            "dataType": "string",
+            "sourceColumn": "tipo_movil_elegido",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rol_elegido",
+            "dataType": "string",
+            "sourceColumn": "rol_elegido",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zona_actual_elegido",
+            "dataType": "string",
+            "sourceColumn": "zona_actual_elegido",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "posicion_elegida",
+            "dataType": "int64",
+            "sourceColumn": "posicion_elegida",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "motivo_decision",
+            "dataType": "string",
+            "sourceColumn": "motivo_decision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "servicios_turno_elegido",
+            "dataType": "int64",
+            "sourceColumn": "servicios_turno_elegido",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "cumple_objetivo",
+            "dataType": "int64",
+            "sourceColumn": "cumple_objetivo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "segundos_decision",
+            "dataType": "double",
+            "sourceColumn": "segundos_decision",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "cumple_r02",
+            "dataType": "int64",
+            "sourceColumn": "cumple_r02",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "min_viaje_elegido",
+            "dataType": "double",
+            "sourceColumn": "min_viaje_elegido",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "factor_trafico",
+            "dataType": "double",
+            "sourceColumn": "factor_trafico",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "distancia_elegida_km",
+            "dataType": "double",
+            "sourceColumn": "distancia_elegida_km",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "primera_llegada_estimada_min",
+            "dataType": "double",
+            "sourceColumn": "primera_llegada_estimada_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "exceso_min",
+            "dataType": "double",
+            "sourceColumn": "exceso_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tarifa_despachador_min_cop",
+            "dataType": "double",
+            "sourceColumn": "tarifa_despachador_min_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tarifa_movil_km_cop",
+            "dataType": "double",
+            "sourceColumn": "tarifa_movil_km_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tarifa_movil_hora_cop",
+            "dataType": "double",
+            "sourceColumn": "tarifa_movil_hora_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_decision_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_decision_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_viaje_primera_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_viaje_primera_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ambulancia_preasignada_id",
+            "dataType": "string",
+            "sourceColumn": "ambulancia_preasignada_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rol_ambulancia",
+            "dataType": "string",
+            "sourceColumn": "rol_ambulancia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zona_actual_ambulancia",
+            "dataType": "string",
+            "sourceColumn": "zona_actual_ambulancia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "espera_liberacion_min",
+            "dataType": "double",
+            "sourceColumn": "espera_liberacion_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "min_viaje_ambulancia",
+            "dataType": "double",
+            "sourceColumn": "min_viaje_ambulancia",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "km_ambulancia",
+            "dataType": "double",
+            "sourceColumn": "km_ambulancia",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "factor_ambulancia",
+            "dataType": "double",
+            "sourceColumn": "factor_ambulancia",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tarifa_ambulancia_km_cop",
+            "dataType": "double",
+            "sourceColumn": "tarifa_ambulancia_km_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tarifa_ambulancia_hora_cop",
+            "dataType": "double",
+            "sourceColumn": "tarifa_ambulancia_hora_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "llegada_ambulancia_estimada_min",
+            "dataType": "double",
+            "sourceColumn": "llegada_ambulancia_estimada_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_viaje_ambulancia_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_viaje_ambulancia_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_viaje_elegido_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_viaje_elegido_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_total_estimado_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_total_estimado_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "version_esquema",
+            "dataType": "int64",
+            "sourceColumn": "version_esquema",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "codigo_emi_inicial",
+            "dataType": "string",
+            "sourceColumn": "codigo_emi_inicial",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "minuto_solicitud_escenario",
+            "dataType": "double",
+            "sourceColumn": "minuto_solicitud_escenario",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "fuente_previo_despacho",
+            "dataType": "string",
+            "sourceColumn": "fuente_previo_despacho",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "transcurrido_al_confirmar_min",
+            "dataType": "double",
+            "sourceColumn": "transcurrido_al_confirmar_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "plan_recomendado_id",
+            "dataType": "string",
+            "sourceColumn": "plan_recomendado_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "plan_elegido_id",
+            "dataType": "string",
+            "sourceColumn": "plan_elegido_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "es_excepcion",
+            "dataType": "int64",
+            "sourceColumn": "es_excepcion",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "motivo_detalle",
+            "dataType": "string",
+            "sourceColumn": "motivo_detalle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "espera_elegido_min",
+            "dataType": "double",
+            "sourceColumn": "espera_elegido_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "llegada_mostrada_min",
+            "dataType": "double",
+            "sourceColumn": "llegada_mostrada_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_mostrado_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_mostrado_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "cantidad_moviles",
+            "dataType": "int64",
+            "sourceColumn": "cantidad_moviles",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "km_total_elegido",
+            "dataType": "double",
+            "sourceColumn": "km_total_elegido",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "advertencia_d03",
+            "dataType": "string",
+            "sourceColumn": "advertencia_d03",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "referencia_movil_ids",
+            "dataType": "string",
+            "sourceColumn": "referencia_movil_ids",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "referencia_primera_llegada_min",
+            "dataType": "double",
+            "sourceColumn": "referencia_primera_llegada_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "referencia_costo_ida_cop",
+            "dataType": "double",
+            "sourceColumn": "referencia_costo_ida_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "coincide_referencia",
+            "dataType": "int64",
+            "sourceColumn": "coincide_referencia",
+            "summarizeBy": "sum"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "decisiones",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    // RutaCSV: parámetro de texto con la ruta absoluta de EMI_EnRuta\\datos\\decisiones.csv.",
+                "    // Una fila = una decisión (un intento confirmado). Las filas del esquema v1 traen vacías las columnas v2.",
+                "    Origen = Csv.Document(File.Contents(RutaCSV), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Cabeceras = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    Vacias = Table.ReplaceValue(Cabeceras, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Cabeceras)),",
+                "    Enteros = {\"cantidad_elegibles\",\"posicion_elegida\",\"servicios_turno_elegido\",\"cumple_objetivo\",\"cumple_r02\",",
+                "        \"version_esquema\",\"es_excepcion\",\"cantidad_moviles\",\"coincide_referencia\"},",
+                "    Decimales = {\"objetivo_min\",\"previo_despacho_min\",\"min_viaje_recomendado\",\"costo_viaje_recomendado_cop\",",
+                "        \"segundos_decision\",\"min_viaje_elegido\",\"factor_trafico\",\"distancia_elegida_km\",\"primera_llegada_estimada_min\",",
+                "        \"exceso_min\",\"tarifa_despachador_min_cop\",\"tarifa_movil_km_cop\",\"tarifa_movil_hora_cop\",\"costo_decision_cop\",",
+                "        \"costo_viaje_primera_cop\",\"espera_liberacion_min\",\"min_viaje_ambulancia\",\"km_ambulancia\",\"factor_ambulancia\",",
+                "        \"tarifa_ambulancia_km_cop\",\"tarifa_ambulancia_hora_cop\",\"llegada_ambulancia_estimada_min\",",
+                "        \"costo_viaje_ambulancia_cop\",\"costo_viaje_elegido_cop\",\"costo_total_estimado_cop\",",
+                "        \"minuto_solicitud_escenario\",\"transcurrido_al_confirmar_min\",\"espera_elegido_min\",\"llegada_mostrada_min\",",
+                "        \"costo_mostrado_cop\",\"km_total_elegido\",\"referencia_primera_llegada_min\",\"referencia_costo_ida_cop\"},",
+                "    // fecha_hora_decision conserva su desfase horario como texto ISO; la fecha del escenario es datetime.",
+                "    Fechas = {{\"fecha_solicitud_escenario\", type datetime}},",
+                "    // Solo se tipan las columnas presentes, para leer también un registro v1.",
+                "    Presentes = Table.ColumnNames(Vacias),",
+                "    EnterosP = List.Intersect({Enteros, Presentes}),",
+                "    DecimalesP = List.Intersect({Decimales, Presentes}),",
+                "    Texto = List.Difference(Presentes, List.Combine({EnterosP, DecimalesP, List.Transform(Fechas, each _{0})})),",
+                "    Tipos = List.Combine({List.Transform(Texto, each {_, type text}), List.Transform(EnterosP, each {_, Int64.Type}),",
+                "        List.Transform(DecimalesP, each {_, type number}), Fechas}),",
+                "    // Los CSV usan punto decimal: se convierte con cultura en-US. Código EMI e identificadores quedan como texto.",
+                "    Datos = Table.TransformColumnTypes(Vacias, Tipos, \"en-US\"),",
+                "    // Las participaciones se expanden en otra consulta: aquí no se suman móviles para no duplicar costos.",
+                "    Resultado = Table.RemoveColumns(Datos, List.Intersect({{\"vista_json\", \"participaciones_json\"}, Presentes}))",
+                "in",
+                "    Resultado"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Decisiones",
+            "expression": "DISTINCTCOUNT(decisiones[solicitud_id])",
+            "formatString": "0"
+          },
+          {
+            "name": "Asignadas",
+            "expression": "COALESCE(CALCULATE([Decisiones], decisiones[estado_decision] = \"asignada\"), 0)",
+            "formatString": "0"
+          },
+          {
+            "name": "Pendientes o sin asignar",
+            "expression": "COALESCE(CALCULATE([Decisiones], decisiones[estado_decision] IN {\"pendiente\", \"sin_asignar\"}), 0)",
+            "formatString": "0"
+          },
+          {
+            "name": "Decisión mediana (s)",
+            "expression": "MEDIAN(decisiones[segundos_decision])",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Cumple R02 (%)",
+            "expression": "DIVIDE(SUM(decisiones[cumple_r02]), COUNT(decisiones[cumple_r02]))",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Primera llegada mediana (min)",
+            "expression": "MEDIAN(decisiones[primera_llegada_estimada_min])",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Dentro del objetivo (%)",
+            "expression": "DIVIDE(SUM(decisiones[cumple_objetivo]), [Asignadas])",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Denominador cumplimiento",
+            "expression": "\"Asignadas: \" & FORMAT([Asignadas], \"0\") & \" · Pendientes o sin asignar: \" & FORMAT([Pendientes o sin asignar], \"0\")"
+          },
+          {
+            "name": "Llegada mediana de ambulancia R04 (min)",
+            "expression": "CALCULATE(MEDIAN(decisiones[llegada_ambulancia_estimada_min]), NOT ISBLANK(decisiones[ambulancia_preasignada_id]))",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Costo medio de ida por decisión (COP)",
+            "expression": "AVERAGE(decisiones[costo_viaje_elegido_cop])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Km medio por decisión",
+            "expression": "AVERAGE(decisiones[km_total_elegido])",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Costo medio de decisión, supuesto (COP)",
+            "expression": "AVERAGE(decisiones[costo_decision_cop])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Participaciones",
+            "expression": "COUNTROWS(participaciones)",
+            "formatString": "0"
+          },
+          {
+            "name": "Costo de ida por móvil (COP)",
+            "expression": "SUM(participaciones[costo_ida_cop])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Δ primera llegada vs referencia (min)",
+            "expression": "AVERAGEX(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_primera_llegada_min]) && NOT ISBLANK(decisiones[primera_llegada_estimada_min])),\n             decisiones[primera_llegada_estimada_min] - decisiones[referencia_primera_llegada_min])",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Δ costo de ida vs referencia (COP)",
+            "expression": "AVERAGEX(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_costo_ida_cop]) && NOT ISBLANK(decisiones[costo_viaje_elegido_cop])),\n             decisiones[costo_viaje_elegido_cop] - decisiones[referencia_costo_ida_cop])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Observaciones con referencia",
+            "expression": "COUNTROWS(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_costo_ida_cop])))",
+            "formatString": "0"
+          },
+          {
+            "name": "Coincide con la referencia (%)",
+            "expression": "DIVIDE(SUM(decisiones[coincide_referencia]), COUNT(decisiones[coincide_referencia]))",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "P90 histórico (min)",
+            "expression": "MAX(linea_base[p90_min])",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Cumplimiento histórico (%)",
+            "expression": "MAX(linea_base[pct_cumple]) / 100",
+            "formatString": "0.0%;-0.0%;0.0%"
+          }
+        ]
+      },
+      {
+        "name": "participaciones",
+        "columns": [
+          {
+            "name": "solicitud_id",
+            "dataType": "string",
+            "sourceColumn": "solicitud_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "id_movil",
+            "dataType": "string",
+            "sourceColumn": "id_movil",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tipo",
+            "dataType": "string",
+            "sourceColumn": "tipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rol",
+            "dataType": "string",
+            "sourceColumn": "rol",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zona_origen",
+            "dataType": "string",
+            "sourceColumn": "zona_origen",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "espera_min",
+            "dataType": "double",
+            "sourceColumn": "espera_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "viaje_min",
+            "dataType": "double",
+            "sourceColumn": "viaje_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "llegada_min",
+            "dataType": "double",
+            "sourceColumn": "llegada_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "km",
+            "dataType": "double",
+            "sourceColumn": "km",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_ida_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_ida_cop",
+            "summarizeBy": "sum"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "participaciones",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    // Una fila por móvil elegido. R04 aporta dos filas (VMD + ambulancia) a una sola decisión.",
+                "    // Se relaciona con decisiones[solicitud_id] (uno a varios). El costo de decisión vive solo en `decisiones`.",
+                "    Origen = Csv.Document(File.Contents(RutaCSV), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Cabeceras = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    Asignadas = Table.SelectRows(Cabeceras, each [estado_decision] = \"asignada\"),",
+                "    ConJson = if List.Contains(Table.ColumnNames(Asignadas), \"participaciones_json\")",
+                "        then Asignadas else Table.AddColumn(Asignadas, \"participaciones_json\", each \"\"),",
+                "    // Filas v1 sin JSON: se reconstruyen desde las columnas del primer móvil y la ambulancia preasignada.",
+                "    Lista = Table.AddColumn(ConJson, \"partes\", each",
+                "        if [participaciones_json] <> null and [participaciones_json] <> \"\" then Json.Document([participaciones_json])",
+                "        else List.RemoveNulls({",
+                "            [id_movil=[movil_elegido_id], tipo=[tipo_movil_elegido], rol=[rol_elegido], zona_origen=[zona_actual_elegido],",
+                "             espera_min=\"0\", viaje_min=[min_viaje_elegido], llegada_min=[primera_llegada_estimada_min],",
+                "             km=[distancia_elegida_km], costo_ida_cop=[costo_viaje_primera_cop]],",
+                "            if [ambulancia_preasignada_id] = \"\" then null else",
+                "            [id_movil=[ambulancia_preasignada_id], tipo=null, rol=[rol_ambulancia], zona_origen=[zona_actual_ambulancia],",
+                "             espera_min=[espera_liberacion_min], viaje_min=[min_viaje_ambulancia],",
+                "             llegada_min=[llegada_ambulancia_estimada_min], km=[km_ambulancia], costo_ida_cop=[costo_viaje_ambulancia_cop]]})),",
+                "    Base = Table.SelectColumns(Lista, {\"solicitud_id\", \"partes\"}),",
+                "    Expandida = Table.ExpandListColumn(Base, \"partes\"),",
+                "    Campos = {\"id_movil\", \"tipo\", \"rol\", \"zona_origen\", \"espera_min\", \"viaje_min\", \"llegada_min\", \"km\", \"costo_ida_cop\"},",
+                "    Registros = Table.ExpandRecordColumn(Expandida, \"partes\", Campos, Campos),",
+                "    ComoTexto = Table.TransformColumns(Registros, List.Transform({\"espera_min\", \"viaje_min\", \"llegada_min\", \"km\", \"costo_ida_cop\"},",
+                "        (c) => {c, each if _ = null or _ = \"\" then null else Text.From(_, \"en-US\")})),",
+                "    Tipos = Table.TransformColumnTypes(ComoTexto, {{\"solicitud_id\", type text}, {\"id_movil\", type text}, {\"tipo\", type text},",
+                "        {\"rol\", type text}, {\"zona_origen\", type text}, {\"espera_min\", type number}, {\"viaje_min\", type number},",
+                "        {\"llegada_min\", type number}, {\"km\", type number}, {\"costo_ida_cop\", type number}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "linea_base",
+        "columns": [
+          {
+            "name": "vista",
+            "dataType": "string",
+            "sourceColumn": "vista",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "codigo_emi",
+            "dataType": "string",
+            "sourceColumn": "codigo_emi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "objetivo_min",
+            "dataType": "double",
+            "sourceColumn": "objetivo_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "servicios",
+            "dataType": "int64",
+            "sourceColumn": "servicios",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "denominador",
+            "dataType": "int64",
+            "sourceColumn": "denominador",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "excluidos_anomalia",
+            "dataType": "int64",
+            "sourceColumn": "excluidos_anomalia",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "p90_min",
+            "dataType": "double",
+            "sourceColumn": "p90_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "mediana_min",
+            "dataType": "double",
+            "sourceColumn": "mediana_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "promedio_min",
+            "dataType": "double",
+            "sourceColumn": "promedio_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "pct_cumple",
+            "dataType": "double",
+            "sourceColumn": "pct_cumple",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "costo_completo_medio_cop",
+            "dataType": "double",
+            "sourceColumn": "costo_completo_medio_cop",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "kpi04_espera_asignacion_mediana_min",
+            "dataType": "double",
+            "sourceColumn": "kpi04_espera_asignacion_mediana_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "archivo_p90_min",
+            "dataType": "double",
+            "sourceColumn": "archivo_p90_min",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "archivo_pct_cumple",
+            "dataType": "double",
+            "sourceColumn": "archivo_pct_cumple",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "definicion",
+            "dataType": "string",
+            "sourceColumn": "definicion",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "linea_base",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    // RutaLineaBase: parámetro de texto con la ruta absoluta de EMI_EnRuta\\datos\\entrada\\linea_base_kpi.csv.",
+                "    // Línea base histórica ficticia (archivo 01). No se relaciona con decisiones: se rotula por separado.",
+                "    Origen = Csv.Document(File.Contents(RutaLineaBase), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Cabeceras = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    Tipos = Table.TransformColumnTypes(Cabeceras, {{\"vista\", type text}, {\"codigo_emi\", type text},",
+                "        {\"objetivo_min\", type number}, {\"servicios\", Int64.Type}, {\"denominador\", Int64.Type},",
+                "        {\"excluidos_anomalia\", Int64.Type}, {\"p90_min\", type number}, {\"mediana_min\", type number},",
+                "        {\"promedio_min\", type number}, {\"pct_cumple\", type number}, {\"costo_completo_medio_cop\", type number},",
+                "        {\"kpi04_espera_asignacion_mediana_min\", type number}, {\"archivo_p90_min\", type number},",
+                "        {\"archivo_pct_cumple\", type number}, {\"definicion\", type text}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "participaciones_decisiones",
+        "fromTable": "participaciones",
+        "fromColumn": "solicitud_id",
+        "toTable": "decisiones",
+        "toColumn": "solicitud_id"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"RutaCSV\", \"RutaLineaBase\", \"decisiones\", \"participaciones\", \"linea_base\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

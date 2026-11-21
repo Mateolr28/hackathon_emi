@@ -1,0 +1,180 @@
+{
+  "config": "{\"version\": \"5.43\", \"themeCollection\": {}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useStylableVisualContainerHeader\": true}}",
+  "layoutOptimization": 0,
+  "sections": [
+    {
+      "name": "ReportSection",
+      "displayName": "Decisiones de despacho",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 0,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 16,
+          "y": 8,
+          "z": 0,
+          "width": 760,
+          "height": 40,
+          "config": "{\"name\": \"v00\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 8, \"z\": 0, \"width\": 760, \"height\": 40}}], \"singleVisual\": {\"visualType\": \"textbox\", \"projections\": {}, \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"EMI EnRuta · Demo académica con datos ficticios\", \"textStyle\": {\"fontSize\": \"18pt\", \"fontWeight\": \"bold\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16,
+          "y": 46,
+          "z": 1,
+          "width": 760,
+          "height": 30,
+          "config": "{\"name\": \"v01\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 46, \"z\": 1, \"width\": 760, \"height\": 30}}], \"singleVisual\": {\"visualType\": \"textbox\", \"projections\": {}, \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Resultados del ensayo (decisiones.csv). La línea base histórica ficticia se rotula aparte. Actualizar: Inicio → Actualizar.\", \"textStyle\": {\"fontSize\": \"10pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16,
+          "y": 80,
+          "z": 2,
+          "width": 150,
+          "height": 92,
+          "config": "{\"name\": \"v02\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 80, \"z\": 2, \"width\": 150, \"height\": 92}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.escenario_id\", \"active\": true}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"escenario_id\"}, \"Name\": \"decisiones.escenario_id\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 174,
+          "y": 80,
+          "z": 3,
+          "width": 150,
+          "height": 92,
+          "config": "{\"name\": \"v03\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 174, \"y\": 80, \"z\": 3, \"width\": 150, \"height\": 92}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.codigo_emi\", \"active\": true}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"codigo_emi\"}, \"Name\": \"decisiones.codigo_emi\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 332,
+          "y": 80,
+          "z": 4,
+          "width": 150,
+          "height": 92,
+          "config": "{\"name\": \"v04\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 332, \"y\": 80, \"z\": 4, \"width\": 150, \"height\": 92}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.modalidad\", \"active\": true}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"modalidad\"}, \"Name\": \"decisiones.modalidad\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 490,
+          "y": 80,
+          "z": 5,
+          "width": 150,
+          "height": 92,
+          "config": "{\"name\": \"v05\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 490, \"y\": 80, \"z\": 5, \"width\": 150, \"height\": 92}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.origen_registro\", \"active\": true}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"origen_registro\"}, \"Name\": \"decisiones.origen_registro\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 648,
+          "y": 80,
+          "z": 6,
+          "width": 150,
+          "height": 92,
+          "config": "{\"name\": \"v06\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 648, \"y\": 80, \"z\": 6, \"width\": 150, \"height\": 92}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.solicitud_fuente\", \"active\": true}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"solicitud_fuente\"}, \"Name\": \"decisiones.solicitud_fuente\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16,
+          "y": 182,
+          "z": 7,
+          "width": 400,
+          "height": 130,
+          "config": "{\"name\": \"v07\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 182, \"z\": 7, \"width\": 400, \"height\": 130}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.modalidad\"}, {\"queryRef\": \"decisiones.Decisiones\"}, {\"queryRef\": \"decisiones.Decisión mediana (s)\"}, {\"queryRef\": \"decisiones.Cumple R02 (%)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"modalidad\"}, \"Name\": \"decisiones.modalidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Decisiones\"}, \"Name\": \"decisiones.Decisiones\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Decisión mediana (s)\"}, \"Name\": \"decisiones.Decisión mediana (s)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Cumple R02 (%)\"}, \"Name\": \"decisiones.Cumple R02 (%)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'¿Cuánto tarda la decisión?'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 424,
+          "y": 182,
+          "z": 8,
+          "width": 180,
+          "height": 130,
+          "config": "{\"name\": \"v08\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 424, \"y\": 182, \"z\": 8, \"width\": 180, \"height\": 130}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Primera llegada mediana (min)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Primera llegada mediana (min)\"}, \"Name\": \"decisiones.Primera llegada mediana (min)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Primera llegada mediana (min)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 612,
+          "y": 182,
+          "z": 9,
+          "width": 186,
+          "height": 130,
+          "config": "{\"name\": \"v09\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 612, \"y\": 182, \"z\": 9, \"width\": 186, \"height\": 130}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Llegada mediana de ambulancia R04 (min)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Llegada mediana de ambulancia R04 (min)\"}, \"Name\": \"decisiones.Llegada mediana de ambulancia R04 (min)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Llegada de ambulancia R04 (min)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16,
+          "y": 320,
+          "z": 10,
+          "width": 400,
+          "height": 210,
+          "config": "{\"name\": \"v10\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 320, \"z\": 10, \"width\": 400, \"height\": 210}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"decisiones.codigo_emi\"}], \"Y\": [{\"queryRef\": \"decisiones.Dentro del objetivo (%)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"codigo_emi\"}, \"Name\": \"decisiones.codigo_emi\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Dentro del objetivo (%)\"}, \"Name\": \"decisiones.Dentro del objetivo (%)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Primera llegada estimada dentro del objetivo · denominador: asignadas'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16,
+          "y": 536,
+          "z": 11,
+          "width": 400,
+          "height": 60,
+          "config": "{\"name\": \"v11\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 536, \"z\": 11, \"width\": 400, \"height\": 60}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Denominador cumplimiento\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Denominador cumplimiento\"}, \"Name\": \"decisiones.Denominador cumplimiento\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Denominador'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 424,
+          "y": 320,
+          "z": 12,
+          "width": 180,
+          "height": 100,
+          "config": "{\"name\": \"v12\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 424, \"y\": 320, \"z\": 12, \"width\": 180, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Costo medio de ida por decisión (COP)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Costo medio de ida por decisión (COP)\"}, \"Name\": \"decisiones.Costo medio de ida por decisión (COP)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Costo medio de ida (COP)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 612,
+          "y": 320,
+          "z": 13,
+          "width": 186,
+          "height": 100,
+          "config": "{\"name\": \"v13\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 612, \"y\": 320, \"z\": 13, \"width\": 186, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Km medio por decisión\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Km medio por decisión\"}, \"Name\": \"decisiones.Km medio por decisión\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Km medio por decisión'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 424,
+          "y": 426,
+          "z": 14,
+          "width": 374,
+          "height": 80,
+          "config": "{\"name\": \"v14\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 424, \"y\": 426, \"z\": 14, \"width\": 374, \"height\": 80}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.Costo medio de decisión, supuesto (COP)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Costo medio de decisión, supuesto (COP)\"}, \"Name\": \"decisiones.Costo medio de decisión, supuesto (COP)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Costo de decisión · supuesto del equipo (300 COP/min)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 808,
+          "y": 8,
+          "z": 15,
+          "width": 456,
+          "height": 300,
+          "config": "{\"name\": \"v15\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 808, \"y\": 8, \"z\": 15, \"width\": 456, \"height\": 300}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"participaciones.id_movil\"}], \"Series\": [{\"queryRef\": \"participaciones.rol\"}], \"Y\": [{\"queryRef\": \"decisiones.Costo de ida por móvil (COP)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"participaciones\", \"Type\": 0}, {\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"id_movil\"}, \"Name\": \"participaciones.id_movil\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"rol\"}, \"Name\": \"participaciones.rol\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Costo de ida por móvil (COP)\"}, \"Name\": \"decisiones.Costo de ida por móvil (COP)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Costo de ida por móvil elegido y rol (COP)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 808,
+          "y": 316,
+          "z": 16,
+          "width": 456,
+          "height": 190,
+          "config": "{\"name\": \"v16\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 808, \"y\": 316, \"z\": 16, \"width\": 456, \"height\": 190}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"decisiones.solicitud_fuente\"}, {\"queryRef\": \"decisiones.modalidad\"}, {\"queryRef\": \"decisiones.Observaciones con referencia\"}, {\"queryRef\": \"decisiones.Δ primera llegada vs referencia (min)\"}, {\"queryRef\": \"decisiones.Δ costo de ida vs referencia (COP)\"}, {\"queryRef\": \"decisiones.Coincide con la referencia (%)\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"decisiones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"solicitud_fuente\"}, \"Name\": \"decisiones.solicitud_fuente\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"modalidad\"}, \"Name\": \"decisiones.modalidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Observaciones con referencia\"}, \"Name\": \"decisiones.Observaciones con referencia\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Δ primera llegada vs referencia (min)\"}, \"Name\": \"decisiones.Δ primera llegada vs referencia (min)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Δ costo de ida vs referencia (COP)\"}, \"Name\": \"decisiones.Δ costo de ida vs referencia (COP)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"Coincide con la referencia (%)\"}, \"Name\": \"decisiones.Coincide con la referencia (%)\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'¿Qué cambió respecto de la referencia? (mismo caso e instante)'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 424,
+          "y": 512,
+          "z": 17,
+          "width": 840,
+          "height": 200,
+          "config": "{\"name\": \"v17\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 424, \"y\": 512, \"z\": 17, \"width\": 840, \"height\": 200}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"linea_base.vista\"}, {\"queryRef\": \"linea_base.codigo_emi\"}, {\"queryRef\": \"linea_base.denominador\"}, {\"queryRef\": \"linea_base.p90_min\"}, {\"queryRef\": \"linea_base.pct_cumple\"}, {\"queryRef\": \"linea_base.kpi04_espera_asignacion_mediana_min\"}, {\"queryRef\": \"linea_base.archivo_p90_min\"}, {\"queryRef\": \"linea_base.archivo_pct_cumple\"}]}, \"drillFilterOtherVisuals\": true, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"l\", \"Entity\": \"linea_base\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"vista\"}, \"Name\": \"linea_base.vista\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"codigo_emi\"}, \"Name\": \"linea_base.codigo_emi\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"denominador\"}, \"Name\": \"linea_base.denominador\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"p90_min\"}, \"Name\": \"linea_base.p90_min\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"pct_cumple\"}, \"Name\": \"linea_base.pct_cumple\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"kpi04_espera_asignacion_mediana_min\"}, \"Name\": \"linea_base.kpi04_espera_asignacion_mediana_min\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"archivo_p90_min\"}, \"Name\": \"linea_base.archivo_p90_min\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"l\"}}, \"Property\": \"archivo_pct_cumple\"}, \"Name\": \"linea_base.archivo_pct_cumple\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Línea base histórica ficticia (archivo 01): no es resultado del ensayo'\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ]
+    }
+  ]
+}

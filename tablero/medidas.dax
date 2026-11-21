@@ -1,0 +1,52 @@
+// Crear cada definición por separado con Modelado > Nueva medida (tabla de inicio: decisiones).
+// Las decisiones se cuentan por su ID. El costo de decisión no se suma desde participaciones.
+
+Decisiones = DISTINCTCOUNT(decisiones[solicitud_id])
+
+Asignadas = COALESCE(CALCULATE([Decisiones], decisiones[estado_decision] = "asignada"), 0)
+
+Pendientes o sin asignar = COALESCE(CALCULATE([Decisiones], decisiones[estado_decision] IN {"pendiente", "sin_asignar"}), 0)
+
+// ¿Cuánto tarda la decisión?
+Decisión mediana (s) = MEDIAN(decisiones[segundos_decision])
+
+Cumple R02 (%) = DIVIDE(SUM(decisiones[cumple_r02]), COUNT(decisiones[cumple_r02]))
+
+// ¿Cuándo llegaría la primera unidad?  Denominador = decisiones asignadas.
+Primera llegada mediana (min) = MEDIAN(decisiones[primera_llegada_estimada_min])
+
+Dentro del objetivo (%) = DIVIDE(SUM(decisiones[cumple_objetivo]), [Asignadas])
+
+Denominador cumplimiento = "Asignadas: " & FORMAT([Asignadas], "0") & " · Pendientes o sin asignar: " & FORMAT([Pendientes o sin asignar], "0")
+
+Llegada mediana de ambulancia R04 (min) =
+    CALCULATE(MEDIAN(decisiones[llegada_ambulancia_estimada_min]), NOT ISBLANK(decisiones[ambulancia_preasignada_id]))
+
+// ¿Cuánto cuesta la alternativa?  Costo de ida de los móviles elegidos (R04 suma ambos trayectos una sola vez).
+Costo medio de ida por decisión (COP) = AVERAGE(decisiones[costo_viaje_elegido_cop])
+
+Km medio por decisión = AVERAGE(decisiones[km_total_elegido])
+
+Costo medio de decisión, supuesto (COP) = AVERAGE(decisiones[costo_decision_cop])
+
+Participaciones = COUNTROWS(participaciones)
+
+Costo de ida por móvil (COP) = SUM(participaciones[costo_ida_cop])
+
+// ¿Qué cambió respecto de la referencia?  Mismo caso e instante; solo filas con referencia calculable.
+Δ primera llegada vs referencia (min) =
+    AVERAGEX(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_primera_llegada_min]) && NOT ISBLANK(decisiones[primera_llegada_estimada_min])),
+             decisiones[primera_llegada_estimada_min] - decisiones[referencia_primera_llegada_min])
+
+Δ costo de ida vs referencia (COP) =
+    AVERAGEX(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_costo_ida_cop]) && NOT ISBLANK(decisiones[costo_viaje_elegido_cop])),
+             decisiones[costo_viaje_elegido_cop] - decisiones[referencia_costo_ida_cop])
+
+Observaciones con referencia = COUNTROWS(FILTER(decisiones, NOT ISBLANK(decisiones[referencia_costo_ida_cop])))
+
+Coincide con la referencia (%) = DIVIDE(SUM(decisiones[coincide_referencia]), COUNT(decisiones[coincide_referencia]))
+
+// Línea base histórica ficticia (tabla linea_base, sin relación). Usar con filtro vista = "original".
+P90 histórico (min) = MAX(linea_base[p90_min])
+
+Cumplimiento histórico (%) = MAX(linea_base[pct_cumple]) / 100
